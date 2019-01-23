@@ -1,0 +1,270 @@
+{
+	"books": [{
+		"id":1,
+		"cover": "https://preview.ibb.co/bC5ELQ/alex_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Tell me in words",
+		"description": "The multifaceted catalan writer show us in his most romantic novel how, basically, our relationship is as easy as saying things clear. That's it.",
+		"language": "es",
+		"price": 15.54,
+		"genre": "auto help",
+		"stock": 5
+	}, {
+		"id":2,
+		"cover": "https://preview.ibb.co/dvM9AQ/eddie_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "I see it black",
+		"description": "Sometimes you think you understand something when someone explains it you, but when you have to code you come up with a doubt. Can you see it? Eduard Catala takes out his sleeve a science fiction master piece.",
+		"language": "es",
+		"price": 20.52,
+		"genre": "science fiction",
+		"stock": 20
+	}, {
+		"id":3,
+		"cover": "https://preview.ibb.co/nF3Un5/flecha_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "My algorithm is faster",
+		"description": "Once again Warrior, once again the arrow. This is a book that will have you hooked from the moment you open its cover. It hooks you up fast, very fast, hyper fast.",
+		"language": "es",
+		"price": 11.99,
+		"genre": "epic",
+		"stock": 4
+	}, {
+		"id":4,
+		"cover": "https://preview.ibb.co/hPod4k/joan_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Amazing Design Art",
+		"description": "Delicate in each word, this second volume of the Triology 'Love Front-end' is, for now, the most sophisticated book from the author. 'Romance CSS' fascinated us, we love this, What will 'JavaScript Orgasm' bring us?",
+		"language": "es",
+		"genre": "romance",
+		"price": 11.95
+	}, {
+		"id":5,
+		"cover": "https://preview.ibb.co/iVRAuk/maruti_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "The Javascript Guru",
+		"description": "From India to Spain, this book explains us how your dreams like a developer can be real. Functions, Objects, Variables... All of JavaScript is here in this Amazing book.",
+		"language": "en",
+		"price": 12,
+		"genre": "adventure",
+		"stock": 9
+	}, {
+		"id":6,
+		"cover": "https://preview.ibb.co/n82iEk/oruc_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Azerbaijan Roulette",
+		"description": "Meanwhile you wait for the next Code challenge you can play some football with your mates... GOOOOOOOAAAAL!!",
+		"language": "en",
+		"price": 12.99,
+		"genre": "adventure",
+		"stock": 7
+	}, {
+		"id":7,
+		"cover": "https://preview.ibb.co/bHMWPk/roosy_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Java... what?",
+		"description": "For those of you that don't understand nothing about new technologies, Mr. Roosy arrives to give you some ray of light in your darkness. You'll never ask Java...what? again.",
+		"language": "en",
+		"price": 35.90,
+		"genre": "auto help",
+		"stock": 2
+	}, {
+		"id":8,
+		"cover": "https://preview.ibb.co/n06LH5/vcarpio_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Digital Nomad",
+		"description": "You start at 9 in the morning, get comfy on your chair, feets on the table and you start coding. The life of a digital nomad can be wonderful. Great short story from the writer and Faceook ex-developer Victor Carpio.",
+		"language": "es",
+		"price": 25.50,
+		"genre": "adventure",
+		"stock": 3
+	}, {
+		"id":9,
+		"cover": "https://preview.ibb.co/dPxsYv/Albert_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Why not use Mustache",
+		"description": "Famous writer Albert Lara teaches us the power of JavaScript to create templates and the reasons not to use a system created for this end like Mustache, is not always the best option...",
+		"language": "es",
+		"price": 24,
+		"genre": "science fiction",
+		"stock": 6
+	}, {
+		"id":10,
+		"cover": "https://preview.ibb.co/e1z6tv/Bryn_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Shut up little bastards",
+		"description": "Silence is necessary in these trouble times to concentrate. Bryn will battle against all odds in this harsh story based on actual events",
+		"language": "es",
+		"price": 33.45,
+		"genre": "science fiction",
+		"stock": 1
+	}, {
+		"id":11,
+		"cover": "https://preview.ibb.co/fqbmtv/Eduardo_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "I don't give a damn",
+		"description": "Why learn JavaScript when I can get cups instead? Eduardo's story will take us from being deep in shit to be in the deepest shit.",
+		"language": "es",
+		"price": 29.99,
+		"genre": "thriller",
+		"stock": 0
+	}, {
+		"id":12,
+		"cover": "https://preview.ibb.co/ctuvmF/Erica_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Don't count on me",
+		"description": "There are times where you can't take the pressure. This is one of them. Erica didn't make it, but there is people who claim to have seen her in some summer nights...",
+		"language": "es",
+		"price": 23.99,
+		"genre": "thriller",
+		"stock": 12
+	}, {
+		"id":13,
+		"cover": "https://preview.ibb.co/hBtc0a/Gerard_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Bloody asynchrony",
+		"description": "What do we understand by asynchrony? What in hell does it exist? Isn't easy enough the synchronous world? De Haro presents us a science fiction story full of unexpected turns.",
+		"language": "en",
+		"price": 12.99,
+		"genre": "science ficiton",
+		"stock": 4
+	}, {
+		"id":14,
+		"cover": "https://preview.ibb.co/esZT6F/Juan_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Java starts now",
+		"description": "HTML, CSS, JavaScript even jQuery are childs games to who resolves to it. But Java, thats an important matter. Quite a challenge. It won't be easy, front is behind us. Java starts now.",
+		"language": "es",
+		"price": 13.20,
+		"genre": "manual",
+		"stock": 21
+	}, {
+		"id":15,
+		"cover": "https://preview.ibb.co/jv3c0a/Lluis_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "document.write()",
+		"description": "I don't need anymore. I don't want functions which I don't know how they work. Document. write () does what I want when I want it. Tragic narrative of a man with an obsession...",
+		"language": "ca",
+		"price": 15.55,
+		"genre": "drama",
+		"stock": 3
+	}, {
+		"id":16,
+		"cover": "https://preview.ibb.co/bBJXYv/Muhammad_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Learning Syntax",
+		"description": "A man with the need to learn every word of every new programming language. An almost impossible goal that will make him struggle with life and with his interior.",
+		"language": "en",
+		"price": 12.49,
+		"genre": "biography",
+		"stock": 9
+	}, {
+		"id":17,
+		"cover": "https://preview.ibb.co/ja3XYv/Nuria_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Design First",
+		"description": "Now matter how much JavaScript helps us give functionality to our page, design is essential. Without a good design a page goes without saying. Nuria talks about the importance of a big visual impact.",
+		"language": "en",
+		"price": 11.25,
+		"genre": "manual",
+		"stock": 6
+	}, {
+		"id":18,
+		"cover": "https://preview.ibb.co/hCVqLa/Vicent_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Code of Vincent",
+		"description": "Vicent Clapes presents a story that narrates how a simple developer manages to become an authentic code warrior. Battles against jQuery dragons and JavaScript wizards, in the geekiest adventure.",
+		"language": "ca",
+		"price": 35.99,
+		"genre": "science fiction",
+		"stock": 2
+	}, {
+		"id":19,
+		"cover": "https://preview.ibb.co/iVRmtv/Victor_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Master of parameters",
+		"description": "When you realize that 10 similar functions can become just one, simply passing a few parameters, you become aware of its full potential. This is when you become a master of parameters.",
+		"language": "en",
+		"price": 35,
+		"genre": "manual",
+		"stock": 5
+	}, {
+		"id":20,
+		"cover": "https://preview.ibb.co/dGcsYv/Auger_min.png",
+		"slider": "",
+		"featured": "no",
+		"title": "Local Storage",
+		"description": "JSON calls, JavaScript objects, Table Sorter, iframe, loading screens... All of these are lost time for the user. We need to fix this. Here is where the power of Local Storage comes in handy. Gotcha!!!",
+		"language": "es",
+		"price": 34.44,
+		"genre": "auto help",
+		"stock": 3
+	}, {
+		"id":21,
+		"cover": "https://i.ibb.co/Wcg1QgZ/rawlbookcover.png",
+		"slider": "https://i.ibb.co/7vKbYg3/sliderrawl.png",
+		"featured": "yes",
+		"title": "European code Mentor",
+		"description": "From the streets of Barcelona, this helping soul becomes a powerful life Guru to change the way of living of many people.",
+		"language": "es",
+		"price": 27.89,
+		"genre": "auto help",
+		"stock": 15
+	}, {
+		"id":22,
+		"cover": "https://i.ibb.co/z7JnM5D/alexbookcover.png",
+		"slider": "https://i.ibb.co/bsn2ctx/slideralex.png",
+		"featured": "yes",
+		"title": "Sky is not the limit",
+		"description": "Thrilling adventure from a physicist that became the best coder in Europe. Absolutetly blows your mind in every page. One of the best novels for 2018.",
+		"language": "es",
+		"price": 37.89,
+		"genre": "Adventure",
+		"stock": 1
+
+	},
+	{
+		"id":23,
+		"cover": "https://i.ibb.co/FXCwkr9/lluisbookcover.png",
+		"slider": "https://i.ibb.co/bg1s4TV/sliderlluis.png",
+		"featured": "yes",
+		"title": "From mentor to CEO",
+		"description": "This biography, relates the life of a young code mentor who becomes CEO of one of the biggest companies in the world of programming, do you wonder how he did it? Addictive lecture of a passionate life changing mentor.",
+		"language": "es",
+		"price": 15.89,
+		"genre": "biography",
+		"stock": 6
+
+	},{
+		"id":24,
+		"cover": "https://i.ibb.co/WKB4MDQ/vasilbookcover.png",
+		"slider": "https://i.ibb.co/rQ5GDV0/slidervasil.png",
+		"featured": "yes",
+		"title": "The art of Gambling",
+		"description": "This biography, relates the life of a succesful Gambler. Soccer, Poker, Roulette... all the methods you think you know are completly reworked by the mathematical genious, Vasil Markov",
+		"language": "es",
+		"price": 17.89,
+		"genre": "biography",
+		"stock": 18
+
+	}]
+}

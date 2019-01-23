@@ -1,0 +1,342 @@
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	background: #2d3246;
+	
+
+}
+
+.container {
+	background: #eeeeee;
+}
+
+.logo {
+	height: 50px;
+	width: 50px;
+}
+
+.bookstore {
+	font-size: 30px;
+	color: #000000;
+	margin-top: 2%
+}
+
+/* -------------- S e a r c h   B a r  -----------------*/
+
+.searchbar {
+	display: flex;
+	flex-direction: row;
+}
+
+/*---------------- N A V   B A R -----------------------*/
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-bottom:2px solid #cccccc;
+	margin-bottom: 5%;
+	
+	
+	
+	
+
+
+}
+
+.bg-dark {
+	background-color: #eeeeee !important
+}
+
+
+.navbar navbar-expand-sm bg-dark navbar-dark {
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+	width:70%;
+	
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #000000;
+
+
+}
+
+.nav-item {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+nav.navbar.navbar-expand-sm.bg-dark.navbar-dark {
+    z-index: 9999;
+    position: fixed;
+    width: 87%;
+}
+
+.bananaman {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+}
+.banana {
+	margin-left: 27%;
+	color: aliceblue;
+	font-size: 40px
+}
+
+.giphy-embed {
+	margin-top: 15%;
+	margin-left: 30%;
+	margin-bottom: 5%;
+	}
+
+/*---------------- S L I D E R   -----------------------*/
+.slider {
+	width: 85%;
+	
+}
+
+.slider-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-top: 125px;
+	
+}
+
+/* ----------------  C A R D S   -----------------------*/
+
+.card {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	border: none;
+	height: 10%;
+	background: #eeeeee;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #eeeeee 0%, #cccccc 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#cccccc', GradientType=0);
+	/* IE6-9 */
+}
+
+.card-body {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	width: 10%;
+}
+
+.card-title {
+	font-size: 130%;
+	justify-content: center;
+}
+
+.card-text {
+	font-size: 110%;
+	margin-left: 11%
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: #78807a;
+	border-color: #78807a;
+	margin-left: 9%;
+
+
+}
+.btn-primary:hover {
+	color: #fff;
+    background-color: #339a14;
+    border-color: #197711;
+}
+
+.tarjetas {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	font-size: 13px;
+	margin-top: 5%;
+	border: none;
+
+}
+
+.image {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	width: 40%;
+	
+	
+}
+
+.card-img-top {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	width: 110%;
+	height: 191px;
+	border: none;
+	cursor: pointer;
+}
+
+
+/*------------------- S e l e c t e d  B o o k --------------*/
+.bookcontainer {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 5%;
+}
+
+.bookcard {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	border: none;
+	
+	
+}
+.card-img-top-book {
+	width: 88%;
+	height: 100%;
+	margin-left: 7%;
+}
+.card-body-book {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	}
+.bookcard-title {
+	font-size: 130%;
+	justify-content: center;
+	margin-left: 11%;
+}
+.bookcard-text {
+	font-size: 110%;
+	margin-left: 11%;
+	margin-top: 5%;
+}
+.bookadd {
+	margin-left: 16%;
+	margin-right: 16%;
+	margin-top: 5%;
+}
+.decoration {
+	text-decoration: underline;
+}
+
+/* -------------- S H O P P I N G   C A R T -----------------*/
+
+.shoppingcart {
+
+	display: flex;
+	flex-direction: row;
+
+
+}
+
+.btn-success {
+	color: #fff;
+	background-color: #78807a;
+	border-color: #78807a;
+}
+
+.btn-lg {
+	padding: .2rem 2rem;
+
+
+}
+
+
+.viewcart {
+	margin-top: 10%;
+	
+}
+
+
+
+
+
+
+/*--------------------F O O T E R---------------------------*/
+
+section footer-classic context-dark bg-image {
+	margin-right: 13%;
+}
+
+.context-dark, .bg-gray-dark, .bg-primary {
+    color: #ffffff
+}
+
+.footer-text {
+	color: #ffffff
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+    color: #ffffff;
+}
+
+.nav-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 23px;
+    font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.social-container .col {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-list li a:before {
+    content: "\f14f";
+    font: 400 21px/1 "Material Design Icons";
+    color: #4d6de6;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: -28px;
+    margin-right: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .22s ease;
+}
+
+.col-md-4 {margin-top: 5%;}
+
+
+#noMatchingResult {
+	text-align: center;
+}
+
+

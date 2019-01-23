@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title> Online Bookstore</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="apple-mobile-web-app-title" content="NYSL app">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="css/images/applogo.png">
+	<link rel="apple-touch-startup-image" href="">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css">
+</head>
+
+
+<body>
+	<div id="app">
+
+		<!--	H e a d e r -->
+		<header class="container">
+
+			<!-- N a v  B a r -->
+			<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+				<p class="bookstore" href="#"><img src="css/images/logo1.png" class="logo"> Online Bookstore</p>
+
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a v-on:click="hideandshow('index')" class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a v-on:click="hideandshow('title')" class="nav-link" href="#">Title</a>
+					</li>
+					<li class="nav-item">
+						<a v-on:click="hideandshow('author')" class="nav-link" href="#">Author</a>
+					</li>
+
+					<!-- D r o p  D o w n -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+							Genre
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Adventure</a>
+							<a class="dropdown-item" href="#">Auto-help</a>
+							<a class="dropdown-item" href="#">Biograpy</a>
+							<a class="dropdown-item" href="#">Distopic</a>
+							<a class="dropdown-item" href="#">Drama</a>
+							<a class="dropdown-item" href="#">Epic</a>
+							<a class="dropdown-item" href="#">Manual</a>
+							<a class="dropdown-item" href="#">Romance</a>
+							<a class="dropdown-item" href="#">Science Fiction</a>
+							<a class="dropdown-item" href="#">Thriller</a>
+						</div>
+					</li>
+				</ul>
+				<!-- S e a r c h  B a r -->
+				<div class="searchbar">
+					<div class="input-group">
+						<input v-model="searched" class="form-control mr-sm-2 searchbox" type="text" placeholder="Search ...">
+						<div class="input-group-append">
+							<button class="btn btn-secondary" type="button">
+								<i class="fa fa-search"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!---------------------------------------  S h o p p i n g  C a r t	 ---------------------------->
+				<div class="shoppingcart">
+					<div class="container button-wrapper">
+						<div>
+								<button class="btn btn-primary cartbutton" v-on:click="links.viewcart = !links.viewcart; links.index = ! links.index" class="nav-link" data-toogle="modal" data-target="#mymodal"><span class="stats">
+								{{cart.items.length}}
+								<template v-if="cart.items.length == 1">Book</template>
+								<template v-else>Books</template>
+								in cart | Total {{cartTotal}}€
+								</span>
+								</button>
+								<div class="modal fade" id="myModal">
+									<div class="modal-dialog">
+										<div class="modal-content">
+
+
+											<div class="modal-header">
+												<h4 class="modal-title">Your Cart</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div>
+
+											<div class="modal-body">
+												<table class="table">
+													<thead>
+														<tr>
+															<th scope="col">#</th>
+															<th scope="col">Title</th>
+															<th scope="col">Author</th>
+															<th scope="col">Price</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row">·</th>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+
+											<div class="modal-footer">
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div v-show="links.viewcart" class="container">
+			<div>
+				<h1>Cart</h1>
+				<table v-if="cart.items.length > 0" class="table table-striped viewcart">
+					<thead>
+						<tr>
+							<th>Product</th>
+							<th>Quantity</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr v-for="purchasedbook in cart.items">
+							<td>{{purchasedbook.book.title}}</td>
+							<td>
+								{{ purchasedbook.quantity}} &nbsp;
+								<button class="btn btn-success" @click="increasebookquantity(purchasedbook)" :disabled="purchasedbook.book.stock == 0">+</button>
+								<button class="btn btn-danger" @click="decreasebookquantity(purchasedbook)">-</button>
+							</td>
+							<td>{{ purchasedbook.quantity * purchasedbook.book.price }} €</td>
+						</tr>
+
+						<tr>
+							<td class="text-right" colspan="2">
+								<strong>Subtotal (sin I.V.A)</strong>
+							</td>
+
+							<td>{{cartTotal}}€</td>
+						</tr>
+						<tr>
+							<td class="text-right" colspan="2">
+								<strong>+ 4% I.V.A</strong>
+							</td>
+
+							<td>{{IVA}}€</td>
+						</tr>
+
+						<tr>
+							<td class="text-right" colspan="2">
+								<strong>Total</strong>
+							</td>
+
+							<td>{{parseInt(cartTotal) + parseInt(IVA)}}€</td>
+						</tr>
+
+
+					</tbody>
+				</table>
+
+				<p v-else>Your cart is currently empty.</p>
+
+
+			</div>
+		</div>
+		<div v-show="links.index" class="container">
+
+			<!-- S l i d e r -->
+
+			<div class="slider-container">
+				<div class="slider">
+					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img class="d-block w-100" src="css/images/sliderrawl.png" @click="selectedbook" alt="First slide">
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="css/images/sliderlluis.png" @click="selectedbook(book)" alt="Second slide">
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="css/images/slidervasil.png" @click="selectedbook(book)" alt="Third slide">
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="css/images/slideralex.png" @click="selectedbook(book)" alt="Fourth slide">
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+
+
+				</div>
+			</div>
+			<!--B o o k  S t o r e -->
+
+			<div class="tarjetas">
+				<div class="card" style="width: 16rem;" v-for="book in Books">
+					<div @click="selectedbook(book)" class="image">
+						<img class="card-img-top caratula" v-bind:src="book.cover" alt="Avatar">
+					</div>
+					<div class="card-body">
+						<h4 class="card-title">{{book.title}}</h4>
+						<h5 class="card-text">Price: {{book.price}}€</h5>
+						<h5 class="card-text">
+							<div class="number-in-stock" :class="{few: book.stock < 10 && book.stock > 0, none: book.stock == 0 }">Stock: {{book.stock}} uds.</div>
+						</h5>
+						<button class="btn btn-success" @click="addbooktocart(book)" :disabled="book.stock == 0">Add to cart</button>
+					</div>
+				</div>
+
+			</div>
+			<h1 id="noMatchingResult">Oops! An error ocurred while searching your book!</h1>
+		</div>
+		<!-- S e a r c h e d  B o o k -->
+		<div v-if="links.searchedbook">
+			<div class="container">
+				<div class="slider-container">
+
+					<div class="bookcontainer">
+						<div class="bookcard">
+							<div class="image">
+								<img class="card-img-top-book caratula" v-bind:src="clickedbook.cover" alt="Avatar">
+							</div>
+							<div class="card-body-book">
+								<h4 class="bookcard-title"><span class="decoration">Title</span>: {{clickedbook.title}}</h4>
+								<h5 class="bookcard-text"><span class="decoration">Description</span>: {{clickedbook.description}}</h5>
+								<h5 class="bookcard-text"><span class="decoration">Price</span>:{{clickedbook.price}} €</h5>
+								<h5 class="bookcard-text"><span class="decoration">Stock</span>: {{clickedbook.stock}} uds.</h5>
+								<a class="btn btn-primary bookadd">Add to cart</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<!-- L i n k s-->
+		<div v-show="links.title">
+			<div class="bananaman">
+				<iframe src="https://giphy.com/embed/ZYoFTHxrWNFbW" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+				<p class="banana">Dancing Banana is working on it!</p>
+			</div>
+		</div>
+		<div v-show="links.author">
+			<div class="bananaman">
+				<iframe src="https://giphy.com/embed/ZYoFTHxrWNFbW" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+				<p class="banana"> Dancing Banana is working here too!</p>
+			</div>
+		</div>
+	</div>
+
+	<!--	F o o t e r -->
+
+	<footer class="section footer-classic context-dark bg-image container" style="background: #2d3246;">
+		<div class="footer-text">
+			<div class="row row-30">
+				<div class="col-md-4 col-xl-5">
+					<div class="pr-xl-4"><a class="brand" href="index.html"></a>
+						<p>We are a beginner online bookstore, dedicated to geek books about code and web design, autohelp, manuals and more!</p>
+						<!-- Rights-->
+						<p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Ubiqum</span><span>. </span><span>All Rights Reserved.</span></p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h5>Contacts</h5>
+					<dl class="contact-list">
+						<dt>Address:</dt>
+						<dd>Glories, Luxa C/Tánger-Badajoz, 08018 Barcelona</dd>
+					</dl>
+					<dl class="contact-list">
+						<dt>email:</dt>
+						<dd><a href="mailto:#">contact@ubiqum.com</a></dd>
+					</dl>
+					<dl class="contact-list">
+						<dt>phone:</dt>
+						<dd><a href="tel:#">+0034 931 06 69 29</a>
+						</dd>
+					</dl>
+				</div>
+				<div class="col-md-4 col-xl-3">
+					<h5>Links</h5>
+					<ul class="nav-list">
+						<li><a href="#">Blog</a></li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row no-gutters social-container">
+			<div class="col"><a class="social-inner" href="https://www.facebook.com/"><i class="fab fa-facebook"></i><span>Facebook</span></a></div>
+			<div class="col"><a class="social-inner" href="https://www.instagram.com/"><i class="fab fa-instagram"></i><span>instagram</span></a></div>
+			<div class="col"><a class="social-inner" href="https://www.twitter.com/"><i class="fab fa-twitter"></i><span>twitter</span></a></div>
+			<div class="col"><a class="social-inner" href="https://www.youtube.com/"><i class="fab fa-youtube"></i><span>YOUTUBE</span></a></div>
+		</div>
+	</footer>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+
+</body>
+
+</html>
